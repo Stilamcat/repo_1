@@ -31,9 +31,8 @@ jobs:
           STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
           touch newfile_repo_1.txt
-          echo "${STILAM_EMAIL}"
-          git config --global user.email "${STILAM_EMAIL}"
-          git config --global user.name "Stilamcat"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -m 'edit new file_1'
           git push origin main

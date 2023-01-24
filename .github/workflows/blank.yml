@@ -29,6 +29,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           touch newfile_repo_1.txt
+          git config --global user.email "anonymous@e.mail"
+          git config --global user.name "Stilamcat"
           git add .
           git commit -m 'edit new file_1'
           git push

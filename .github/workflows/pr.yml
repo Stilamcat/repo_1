@@ -39,7 +39,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd main
-          touch newfile_repo_56.txt
+          touch newfile_repo_57.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
@@ -50,12 +50,12 @@ jobs:
         run: |
           cd repo_2
           git switch -c "actions_temp"
-          touch newfile_repo_d56.txt
+          touch newfile_repo_d57.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
           git commit -m 'edit new file_d2'
-          git push origin actions
+          git push origin actions_temp
 
       - name: Create pr
         run: |

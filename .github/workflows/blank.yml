@@ -35,11 +35,10 @@ jobs:
           ssh-key: ${{ secrets.REPO_2_SSH }}
 
       - name: Run a multi-line script
-        env:
-          STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
           cd main
-          touch newfile_repo_11.txt
+          echo "secret: ${{ secrets.STILAM_EMAIL }}"
+          touch newfile_repo_12.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
@@ -49,7 +48,7 @@ jobs:
       - name: Run repo_2
         run: |
           cd repo_2
-          touch newfile_repo_d3.txt
+          touch newfile_repo_d4.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

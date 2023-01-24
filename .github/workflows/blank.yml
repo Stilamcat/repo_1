@@ -37,8 +37,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd main
-          echo "secret: ${{ secrets.STILAM_EMAIL }}"
-          touch newfile_repo_12.txt
+          touch newfile_repo_13.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
@@ -48,7 +47,7 @@ jobs:
       - name: Run repo_2
         run: |
           cd repo_2
-          touch newfile_repo_d4.txt
+          touch newfile_repo_d5.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

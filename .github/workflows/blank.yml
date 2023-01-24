@@ -32,13 +32,14 @@ jobs:
         with:
           repository: Stilamcat/repo_2
           path: repo_2
+          ssh-key: ${{ secrets.REPO_2_SSH }}
 
       - name: Run a multi-line script
         env:
           STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
           cd main
-          touch newfile_repo_9.txt
+          touch newfile_repo_11.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

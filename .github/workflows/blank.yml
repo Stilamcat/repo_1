@@ -30,7 +30,7 @@ jobs:
         env:
           STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
-          touch newfile_repo_1.txt
+          touch newfile_repo_2.txt
           git config user.name Stilamcat
           git config user.email ${{ secrets.STILAM_EMAIL }}
           git add .

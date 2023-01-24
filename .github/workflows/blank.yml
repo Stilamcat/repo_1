@@ -32,7 +32,7 @@ jobs:
         run: |
           ls -l
           pwd
-          touch newfile_repo_5.txt
+          touch newfile_repo_6.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

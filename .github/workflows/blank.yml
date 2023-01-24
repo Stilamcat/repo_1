@@ -32,12 +32,12 @@ jobs:
         with:
           repository: Stilamcat/repo_2
           path: repo_2
-          ssh-key: ${{ secrets.REPO_2_SSH }}
+          token: ${{ secrets.GAT_TOKEN }}
 
       - name: Run a multi-line script
         run: |
           cd main
-          touch newfile_repo_13.txt
+          touch newfile_repo_14.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
@@ -47,7 +47,7 @@ jobs:
       - name: Run repo_2
         run: |
           cd repo_2
-          touch newfile_repo_d5.txt
+          touch newfile_repo_d6.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

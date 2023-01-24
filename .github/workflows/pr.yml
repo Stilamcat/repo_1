@@ -34,7 +34,7 @@ jobs:
           repository: Stilamcat/repo_2
           path: repo_2
           token: ${{ secrets.GAT_TOKEN }}
-          ref: temp_branch
+          ref: main
 
       - name: Run a multi-line script
         run: |
@@ -49,6 +49,7 @@ jobs:
       - name: Run repo_2
         run: |
           cd repo_2
+          git switch -c "actions_temp"
           touch newfile_repo_d56.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
@@ -61,4 +62,4 @@ jobs:
           cd repo_2
           echo ${{ secrets.GAT_TOKEN }} | gh auth login --with-token
           gh auth status
-          gh pr create --base "main" --head "actions" --title "update something" --body "some desc"
+          gh pr create --base "main" --head "actions_temp" --title "update something" --body "some desc"

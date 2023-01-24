@@ -39,7 +39,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd main
-          touch newfile_repo_52.txt
+          touch newfile_repo_53.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
@@ -49,7 +49,7 @@ jobs:
       - name: Run repo_2
         run: |
           cd repo_2
-          touch newfile_repo_d52.txt
+          touch newfile_repo_d53.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

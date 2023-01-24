@@ -37,6 +37,11 @@ jobs:
         run: |
           pwd
           ls -l
+          cd main
+          pwd
+          ls -l
           cd ..
+          cd repo_2
+          pwd
           ls -l
           

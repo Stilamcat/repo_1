@@ -38,7 +38,7 @@ jobs:
           STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
           cd main
-          touch newfile_repo_7.txt
+          touch newfile_repo_8.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .
@@ -48,7 +48,7 @@ jobs:
       - name: Run repo_2
         run: |
           cd repo_2
-          touch newfile_repo_d2.txt
+          touch newfile_repo_d3.txt
           git config user.name "github-actions[bot]"
           git config user.email "anonymous@e.mail"
           git add .

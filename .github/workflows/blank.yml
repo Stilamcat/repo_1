@@ -33,10 +33,10 @@ jobs:
           git config --global user.name "Stilamcat"
           git add .
           git commit -m 'edit new file_1'
-          git push
+          git push origin main
           git clone https://github.com/Stilamcat/repo_2.git repo_2
           cd repo_2
           touch newfile.txt
           git add .
           git commit -m 'edit new file_2'
-          git push
+          git push origin main

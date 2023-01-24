@@ -30,9 +30,17 @@ jobs:
         env:
           STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
-          touch newfile_repo_4.txt
+          touch newfile_repo_5.txt
           git config user.name "github-actions[bot]"
-          git config user.email "${{ secrets.STILAM_EMAIL }}"
+          git config user.email "anonymous@e.mail"
           git add .
           git commit -m 'edit new file_1'
           git push origin main
+
+      - uses: actions/checkout@v3
+        with: 
+          repository: Stilamcat/repo_2
+      - name: Run second
+        run: |
+          ls -l
+

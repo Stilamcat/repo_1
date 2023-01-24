@@ -32,16 +32,25 @@ jobs:
         with:
           repository: Stilamcat/repo_2
           path: repo_2
-        
-      - name: proc
+
+      - name: Run a multi-line script
+        env:
+          STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
-          pwd
-          ls -l
           cd main
-          pwd
-          ls -l
-          cd ..
+          touch newfile_repo_7.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "anonymous@e.mail"
+          git add .
+          git commit -m 'edit new file_1'
+          git push origin main
+
+      - name: Run repo_2
+        run: |
           cd repo_2
-          pwd
-          ls -l
-          
+          touch newfile_repo_d2.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "anonymous@e.mail"
+          git add .
+          git commit -m 'edit new file_d2'
+          git push origin main

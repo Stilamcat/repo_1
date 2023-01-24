@@ -30,9 +30,9 @@ jobs:
         env:
           STILAM_EMAIL: ${{ secrets.STILAM_EMAIL }}
         run: |
-          touch newfile_repo_3.txt
-          git config user.name Stilamcat
-          git config user.email "anonymous@e.mail"
+          touch newfile_repo_4.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "${{ secrets.STILAM_EMAIL }}"
           git add .
           git commit -m 'edit new file_1'
           git push origin main
